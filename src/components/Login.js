@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { startPostLogin } from '../Actions/loginActions'
 
@@ -8,7 +8,6 @@ const Login = (props) => {
 
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
-    const [formData,setFormData] =useState([])
 
     const handleEmail = (e) => {
         setEmail(e.target.value)
@@ -29,7 +28,6 @@ const Login = (props) => {
             email,
             password
         }
-        console.log(form)
         dispatch(startPostLogin(form))
     }
 

@@ -2,9 +2,9 @@ const inialUser = []
 
 const userReducer = (state = inialUser , action) =>{
     switch(action.type){
-        // case 'USERS_TOKEN':{
-        //     return [...action.payload]
-        // }
+        case 'ACCOUNT_DETAILS':{
+            return [...state , action.payload]
+        }
         default:{
             return state
         }

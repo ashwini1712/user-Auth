@@ -3,7 +3,6 @@ import { userLog } from "./logActions"
 
 export const startPostLogin = (data) =>{
     return (dispatch) => {
-        // const data=getState().user
         axios.post("https://dct-user-auth.herokuapp.com/users/login",data)
             .then((response)=>{
                 if(response.data.token){
